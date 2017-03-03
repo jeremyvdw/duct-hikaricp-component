@@ -11,7 +11,7 @@
     (when password             (.setPassword cfg password))
     (when (some? auto-commit?) (.setAutoCommit cfg auto-commit?))
     (when conn-timeout         (.setConnectionTimeout cfg conn-timeout))
-    (when idle-timeout         (.setIdleTimeout cfg conn-timeout))
+    (when idle-timeout         (.setIdleTimeout cfg idle-timeout))
     (when max-lifetime         (.setMaxLifetime cfg max-lifetime))
     (when max-pool-size        (.setMaximumPoolSize cfg max-pool-size))
     (when min-idle             (.setMinimumIdle cfg min-idle))
