@@ -9,4 +9,9 @@
                  [org.slf4j/slf4j-nop "1.7.7"]]
   :profiles
   {:dev {:dependencies [[org.clojure/java.jdbc "0.3.6"]
-                        [com.h2database/h2 "1.4.183"]]}})
+                        [com.h2database/h2 "1.4.183"]]}}
+  :plugins [[lein-maven-packagecloud-wagon "0.0.1"]]
+  :deploy-repositories [["snapshots" {:url "packagecloud-https://packagecloud.io/Adikteev/main/maven2"
+                                      :creds :gpg}]
+                        ["releases" {:url "packagecloud-https://packagecloud.io/Adikteev/main/maven2"
+                                     :creds :gpg}]])
